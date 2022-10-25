@@ -1,0 +1,167 @@
+.whitebtn{
+    background-color: white;
+    border: 1px solid black;
+    height: 54px;
+    width: 250px;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.landingPage{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.landingpara{
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.landing-btns{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.blackbtn{
+    background-color: black;
+    color: white;
+    height: 54px;
+    width: 250px;
+    border-radius: 50px;
+    font-size: 20px;
+    margin-left: 25px;
+}
+
+/* about */
+.about{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 100vh;
+    /* background-color: aquamarine; */
+}
+
+.about-left{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    /* background-color: azure; */
+}
+
+.about-right{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    /* background-color: antiquewhite; */
+}
+
+.aboutleft-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aboutleft-h1{
+    font-size: 85px;
+}
+
+.aboutpara{
+    font-size: 20px;
+}
+
+.aboutbtn{
+    width: 167px;
+    height: 54px;
+    margin-left: 0px;
+}
+
+.circlebtn{
+    height: 54px;
+    width: 54px;
+    border-radius: 50px;
+    margin-left: 15px;
+}
+
+.watchdemop{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.signin{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 100vh;
+    /* background-color: aquamarine; */
+}
+
+.signin-left{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.signinleft-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.signinleft-h1{
+    font-size: 75px;
+}
+
+.signin-right{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    /* background-color: black; */
+}
+
+.signinright-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.signinright-h1{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.input-div{
+    display: flex;
+    flex-direction: column;
+}
+
+.signin-input{
+    width: 489px;
+    height: 82px;
+    margin: 10px 0px;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+
+.signin-btn{
+    margin-left: 0px;
+    height: 82px;
+    width: 489px;
+    margin-top: 30px;
+}
