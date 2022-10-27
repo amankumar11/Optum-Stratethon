@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Getting user Input</title>
+</head>
+<body>
+<h1>Enter data to predicr disease</h1>
+<form action="shortenurl">
+    <label for="name">Full name</label>
+    <input type="text" name="name" value="" required>
+    <label for="email">Email id</label>
+    <input type="email" name="email" value="" required>
+    <label for="age">Age</label>
+    <input type="text" name="age" value="" required>
+    <br>
+    <br>
+
+    <label for="symptoms">Choose your appropriate symptoms:
+    <input list="symptoms">
+    <select id="symptoms" multiple>
+        <option value="itching">itching</option>
+        <option value="skin_rash">skin_rash</option>
+        <option value="chills">chills</option>
+        <option value="joint_pain">joint_pain</option>
+        <option value="vomiting">vomiting</option>
+        <option value="fatigue">fatigue</option>
+        <option value="weight_loss">weight_loss</option>
+        <option value="lethargy">lethargy</option>
+        <option value="cough">cough</option>
+        <option value="high_fever">high_fever</option>
+        <option value="breathlessness">breathlessness</option>
+        <option value="head_ache">head_ache</option>
+        <option value="yellowish_skin">yellowish_skin</option>
+        <option value="dark_urine">dark_urine</option>
+        <option value="nausea">nausea</option>
+        <option value="loss_of_appetite">loss_of_appetite</option>
+        <option value="abdominal_pain">abdominal_pain</option>
+        <option value="diarrhoea">diarrhoea</option>
+        <option value="mild_fever">mild_fever</option>
+        <option value="Yellowing_of_eyes">Yellowing_of_eyes</option>
+        <option value="swelled_lymph_nodes">swelled_lymph_nodes</option>
+        <option value="malaise">malaise</option>
+        <option value="blurred_and_distorted_vision">blurred_and_distorted_vision</option>
+        <option value="phlegm">phlegm</option>
+        <option value="chest_pain">chest_pain</option>
+        <option value="dizziness">dizziness</option>
+        <option value="stiff_neck">stiff_neck</option>
+        <option value="loss_of_balance">loss_of_balance</option>
+        <option value="muscle_pain">muscle_pain</option>
+    </select>
+</label>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+
+{{ prediction_text }}
+</body>
+</html>
