@@ -38,6 +38,7 @@ def sign_up():
     if request.method == 'POST':
         email = request.form.get('email')
         name = request.form.get('name')
+        doctype = request.form.get('doctype')
         password1 = request.form.get('password1')
         password2 = request.form.get('password2')
 
@@ -54,10 +55,10 @@ def sign_up():
         elif len(password1) < 7:
             flash('Password must be greater than 7 characters', category='error')
         else:
-            new_user = User(email=email, name=name, password=generate_password_hash(password1, method='sha256'))
+            new_user = User(email=email, name=name, doctype=doctype, password=generate_password_hash(password1, method='sha256'))
             db.session.add(new_user)
             db.session.commit()
-            login_user(user, remember=True)
+            login_user(new_user, remember=True)
             flash("Account created", category='success')
             return redirect(url_for('views.dashboard'))
             

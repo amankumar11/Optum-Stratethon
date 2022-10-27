@@ -165,3 +165,18 @@
     width: 489px;
     margin-top: 30px;
 }
+
+.signup-input{
+    width: 489px;
+    height: 60px;
+    margin: 10px 0px;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+
+.signup-btn{
+    margin-left: 0px;
+    height: 60px;
+    width: 489px;
+    margin-top: 30px;
+}

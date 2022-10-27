@@ -3,8 +3,6 @@ from flask_sqlalchemy import SQLAlchemy
 from os import path
 from flask_login import LoginManager
 
-# from Healthify.auth import login
-
 db = SQLAlchemy()
 DB_NAME = "database.db"
 
