@@ -25,7 +25,8 @@ def predict():
     name = request.form['Full name']
     email = request.form['Email id']
     age = request.form['Age']
-    
+    dict={'itching':0,'skin_rash':0,'chills':0,'joint_pain':0,'vomiting':0,'fatigue':0,'weight_loss':0,'lethargy':0,'cough':0,'high_fever':0,'breathlessness':0,'head_ache':0,'yellowish_skin':0,'dark_urin':0,'nausea':0,'loss_of_appetite':0,'abdominal_pain':0,'diarrhoea':0,'mild_fever':0,'yellowing_of_eyes':0,'swelled_lymph_nodes':0,'malaise':0,'blurred_and_distorted_vision':0,'phlegm':0,'chest_pain':0,'dizziness':0,'stiff_neck':0,'loss_of_balance':0,'muscle_pain':0}
+
     final_features = np.zeros((29,))
     #final_features = [np.array(int_features)]
     prediction = model.predict(final_features)

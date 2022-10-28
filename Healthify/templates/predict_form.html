@@ -38,7 +38,7 @@
                     <div class="form-right">
                         <label class="form-label" for="symptoms">Choose your appropriate symptoms:</label>
                             <!-- <input list="symptoms"> -->
-                            <select class="symptoms-select" id="symptoms" multiple>
+                            <select class="symptoms-select" id="symptoms" multiple onchange="myFunction()" >
                                 <option value="itching">itching</option>
                                 <option value="skin_rash">skin_rash</option>
                                 <option value="chills">chills</option>
@@ -69,6 +69,17 @@
                                 <option value="loss_of_balance">loss_of_balance</option>
                                 <option value="muscle_pain">muscle_pain</option>
                             </select>
+                            <script>
+                                function myFunction() {
+                                    let x=[]
+                                   x.push(document.getElementById("symptoms").value);
+                                   //for(let i = 0 ;i<x.length;i++){console.log(x[i]);}
+                                    //console.log(x)
+                                  //console.log("hi")
+                                  var y=document.getElementById("symptoms").value
+                                  console.log(y)
+                                }
+                                </script>
                     </div>
                 </div>
                 <button class="blackbtn form-btn">Submit</button>
