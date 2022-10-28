@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from flask import Blueprint,request, render_template
 from flask_login import login_required, current_user
 import numpy as np
@@ -19,7 +20,14 @@ def form():
 def dashboard():
     return render_template("doctor_dashboard.html", user=current_user)
 
+@views.route('/result')
+def result():
+    return render_template("result.html")
+
+
 model = pickle.load(open('model_pkl', 'rb'))
+
+
 def predict():
     #For rendering results on HTML GUI
     name = request.form['Full name']
