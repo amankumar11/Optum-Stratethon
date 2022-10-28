@@ -2,3 +2,12 @@
     display: flex;
     width: 80%;
 }
+
+.navcontainer a{
+    text-decoration: none;
+    color: black;
+}
+
+.navcontainer a:hover{
+    color: rgba(0, 0, 0, 0.46);
+}

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Healthify</title>
+    <title>We Care</title>
     <link href="../static/css/nav.css" rel="stylesheet">
     <link href="../static/css/index.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -13,11 +13,11 @@
     <!-- Navbar  -->
     <nav class="navbar bg-light">
         <div class="container navcontainer">
-            <img>
-            <a>Abput</a>
-            <a>Doctors</a>
-            <a>Features</a>
-            <a>Contact Us</a>
+            <img src="../static/img/logo.png" width="110px">
+            <a href="#about">About</a>
+            <a href="/login">Doctors</a>
+            <a href="#features">Features</a>
+            <a href="#footer">Contact Us</a>
             <button class="whitebtn">Predict Now</button>
         </div>
     </nav>
@@ -46,13 +46,13 @@
         <img src="../static/img/Landing.png" width="1200px">
         <p class="landingpara">We beleive an early diagnosis opens the<br>door to future care and treatment.</p>
         <div class="landing-btns">
-            <button class="whitebtn">Predict Now</button>
+            <a class="whitebtn" href="/form">Predict Now</a>
             <a href="/signup" class="blackbtn">I am a Doctor</a>
         </div>
     </section>
 
     <!-- About Section  -->
-    <section class="about">
+    <section class="about" id="about">
         <div class="about-left">
             <div class="aboutleft-details">
                 <h1 class="aboutleft-h1">Health</h1>
@@ -60,7 +60,7 @@
                 <h3>A l❤️t</h3>
                 <p class="aboutpara">We beleive An early diagnosis opens the<br>door to future care and treatment.</p>
                 <div class="landing-btns">
-                    <button class="blackbtn aboutbtn">Predict Now</button>
+                    <a class="blackbtn aboutbtn" href="/form">Predict Now</a>
                     <button class="whitebtn circlebtn">&#x25B6;</button>
                     <p class="watchdemop">Watch Demo</p>
                 </div>
@@ -83,14 +83,8 @@
         <div class="signin-right">
             <div class="siginright-details">
                 <h1 class="signinright-h1">Show Up</h1>
-                <!-- <div class="input-div">
-                    <input type="text" class="signin-input">
-                    <input type="password" class="signin-input">
-                    <button class="blackbtn signin-btn">Get Access</button>
-                </div> -->
                 <form method="POST">
                     <div class="form-group">
-                        <!-- <label for="email">Email Address</label> -->
                         <input type="email" class="signin-input" id="email" name="email" placeholder="Enter email-address"/>
                     </div>
                     <div class="form-group">
@@ -98,7 +92,51 @@
                     </div>
                     <br/>
                     <button type="submit" class="blackbtn signin-btn">Get Access</button>
+                    <a class="sign-a" href="/signup">Sign Up</a>
                 </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features  -->
+    <section class="features" id="features">
+        <h1 class="features_h1">Why <b>We Care ?</b></h1>
+        <div class="featurescards-section">
+            <div class="features-card">
+                <img>
+                <p>Feature 1</p>
+            </div>
+            <div class="features-card right-card">
+                <p>Feature 2</p>
+                <img>
+            </div>
+            <div class="features-card">
+                <img>
+                <p>Feature 3</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer  -->
+    <section class="footer" id="footer">
+        <div class="footer-section">
+            <div class="footer-left">
+                <img src="../static/img/logo.png" width="480px">
+            </div>
+            <div class="footer-right">
+                <h1 class="ourteam-h1">Our Team</h1>
+                <div class="team-detail">
+                    <img>
+                    <p>Aman Kumar</p>
+                </div>
+                <div class="team-detail">
+                    <img>
+                    <p>Hiya Dey Sarkar</p>
+                </div>
+                <div class="team-detail">
+                    <img>
+                    <p>Ishaan Gupta</p>
+                </div>
             </div>
         </div>
     </section>

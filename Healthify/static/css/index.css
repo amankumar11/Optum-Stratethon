@@ -1,10 +1,19 @@
 .whitebtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
     background-color: white;
     border: 1px solid black;
     height: 54px;
     width: 250px;
     border-radius: 50px;
     font-size: 20px;
+}
+
+.whitebtn:hover{
+    color: black;
 }
 
 .landingPage{
@@ -189,4 +198,95 @@
     height: 60px;
     width: 489px;
     margin-top: 30px;
+}
+
+.sign-a{
+    margin-left: 30px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.sign-a:hover{
+    color: black;
+}
+
+/* features */
+.features{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.features_h1{
+    font-size: 75px;
+    margin-top: 10px;
+}
+
+.featurescards-section{
+    display: flex;
+    flex-direction: column;
+    /* background-color: black; */
+    height: 80%;
+    width: 90%;
+}
+
+.features-card{
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    height: 200px;
+    margin: 10px 0px;
+    /* background-color: blue; */
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+.right-card{
+    display: flex;
+    margin-left: 40%;
+}
+
+/* footer  */
+.footer{
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+    border-top: 2px solid #7B2ECC;
+    /* background-color: red; */
+}
+
+.footer-section{
+    display: flex;
+    width: 100%;
+}
+
+.footer-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    /* background-color: aqua; */
+}
+
+.footer-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    background-color: black;
+}
+
+.ourteam-h1{
+    color: white;
+    font-size: 50px;
+}
+
+.team-detail{
+    display: flex;
+    flex-direction: row;
+    color: white;
 }
