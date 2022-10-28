@@ -15,3 +15,7 @@ def form():
 @login_required
 def dashboard():
     return render_template("doctor_dashboard.html", user=current_user)
+
+@views.route('/result')
+def result():
+    return render_template('result.html')
