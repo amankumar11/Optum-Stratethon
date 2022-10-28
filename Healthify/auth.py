@@ -1,4 +1,5 @@
 # from crypt import methods
+# from crypt import methods
 from xmlrpc.client import boolean
 from flask import Blueprint, flash, render_template, request, url_for, redirect
 from .models import User
@@ -63,3 +64,7 @@ def sign_up():
             return redirect(url_for('views.dashboard'))
             
     return render_template("signup.html")
+
+@auth.route('/result', methods=['GET','POST'])
+def result():
+    return render_template("result.html")

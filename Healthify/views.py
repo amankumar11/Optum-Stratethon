@@ -1,3 +1,4 @@
+# from crypt import methods
 from django.shortcuts import render
 from flask import Blueprint,request, render_template
 from flask_login import login_required, current_user
@@ -20,23 +21,27 @@ def form():
 def dashboard():
     return render_template("doctor_dashboard.html", user=current_user)
 
-@views.route('/result')
-def result():
-    return render_template("result.html")
-
-
 model = pickle.load(open('model_pkl', 'rb'))
 
-
+@views.route('/result', methods=['POST'])
 def predict():
     #For rendering results on HTML GUI
-    name = request.form['Full name']
-    email = request.form['Email id']
-    age = request.form['Age']
+    name = request.form['name']
+    email = request.form['email']
+    age = request.form['age']
+    symptoms = request.form.getlist('symptoms[]')
+    # print(symptoms)
+    # final_features = np.array([symptoms])
+    # print(final_features)
     dict={'itching':0,'skin_rash':0,'chills':0,'joint_pain':0,'vomiting':0,'fatigue':0,'weight_loss':0,'lethargy':0,'cough':0,'high_fever':0,'breathlessness':0,'head_ache':0,'yellowish_skin':0,'dark_urin':0,'nausea':0,'loss_of_appetite':0,'abdominal_pain':0,'diarrhoea':0,'mild_fever':0,'yellowing_of_eyes':0,'swelled_lymph_nodes':0,'malaise':0,'blurred_and_distorted_vision':0,'phlegm':0,'chest_pain':0,'dizziness':0,'stiff_neck':0,'loss_of_balance':0,'muscle_pain':0}
-
-    final_features = np.zeros((29,))
-    #final_features = [np.array(int_features)]
+    for s in symptoms:
+        dict[s]=1
+    final_features = list(dict.values())
+    print(final_features)
+    
+    # final_features = np.zeros((29,))
+    # final_features = [np.array(int_features)]
+    # final_features.reshape(1,-1)
     prediction = model.predict(final_features)
     print(prediction)
     # output = '{0:.{1}f}'.format(10*prediction[0][1],2)
