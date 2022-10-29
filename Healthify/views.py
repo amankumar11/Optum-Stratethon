@@ -37,7 +37,7 @@ def predict():
     for s in symptoms:
         dict[s]=1
     final_features = list(dict.values())
-    print(final_features)
+    # print(final_features)
     
     # final_features = np.zeros((29,))
     # final_features = [np.array(int_features)]
@@ -45,13 +45,13 @@ def predict():
     prediction = model.predict([final_features])
     print(prediction)
     # output = '{0:.{1}f}'.format(10*prediction[0][1],2)
-    
-    # SUBJECT = 'Reg diabetes prediction by DiaDictor'
-    # TEXT = predictText + "\n" + content + "For further reference visit our webpage https://github.com/amankumar11/Diadictor\nThanks\nRegards\nDiadictor team"
-    # message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT)
-    # server = smtplib.SMTP("smtp.gmail.com", 587)
-    # server.starttls()
-    # server.login("Diadictor@gmail.com", "zjyiqqmrkoznqarr")
-    # server.sendmail("Diadictor@gmail.com", email, message)
+    predictText="Greetings from Wecare\non the basis of the information provided by you our predictor has found that you are at the risk of you having "+str(prediction)
+    SUBJECT = 'Reg disease prediction by Wecare'
+    TEXT = predictText + "\n" +  "For further reference visit our webpage"+"\n"+"Note: This is just a prediction and not a real diagnosis of the disease. You should consult a doctor immediately if you feel you are at risk." 
+    message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT)
+    server = smtplib.SMTP("smtp.gmail.com", 587)
+    server.starttls()
+    server.login("wecareforyou365247@gmail.com", "kpufeafxhrgenvpq")
+    server.sendmail("wecareforyou365247@gmail.com", email, message)
     
     return render_template('result.html')
