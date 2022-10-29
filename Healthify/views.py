@@ -1,10 +1,13 @@
 # from crypt import methods
+from bs4 import Doctype
 from django.shortcuts import render
 from flask import Blueprint,request, render_template
 from flask_login import login_required, current_user
 import numpy as np
 import pickle
 import smtplib
+from . import db
+from .models import User
 
 views = Blueprint('views',__name__)
 
@@ -43,6 +46,8 @@ def predict():
     # final_features = [np.array(int_features)]
     # final_features.reshape(1,-1)
     prediction = model.predict([final_features])
+    doc = User.query.filter_by(doctype='diabetes')
+    print(doc.name)
     # print(prediction)
     
     # output = '{0:.{1}f}'.format(10*prediction[0][1],2)
@@ -55,4 +60,4 @@ def predict():
     server.login("wecareforyou365247@gmail.com", "kpufeafxhrgenvpq")
     server.sendmail("wecareforyou365247@gmail.com", email, message)
     
-    return render_template('result.html', prediction = str(prediction))
+    return render_template('result.html', prediction = prediction[0])
