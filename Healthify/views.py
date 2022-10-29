@@ -43,7 +43,8 @@ def predict():
     # final_features = [np.array(int_features)]
     # final_features.reshape(1,-1)
     prediction = model.predict([final_features])
-    print(prediction)
+    # print(prediction)
+    
     # output = '{0:.{1}f}'.format(10*prediction[0][1],2)
     predictText="Greetings from Wecare\non the basis of the information provided by you our predictor has found that you are at the risk of you having "+str(prediction)
     SUBJECT = 'Reg disease prediction by Wecare'
@@ -54,4 +55,4 @@ def predict():
     server.login("wecareforyou365247@gmail.com", "kpufeafxhrgenvpq")
     server.sendmail("wecareforyou365247@gmail.com", email, message)
     
-    return render_template('result.html')
+    return render_template('result.html', prediction = str(prediction))
