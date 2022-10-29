@@ -42,7 +42,7 @@ def predict():
     # final_features = np.zeros((29,))
     # final_features = [np.array(int_features)]
     # final_features.reshape(1,-1)
-    prediction = model.predict(final_features)
+    prediction = model.predict([final_features])
     print(prediction)
     # output = '{0:.{1}f}'.format(10*prediction[0][1],2)
     
