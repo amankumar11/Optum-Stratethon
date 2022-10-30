@@ -46,12 +46,19 @@ def predict():
     # final_features = [np.array(int_features)]
     # final_features.reshape(1,-1)
     prediction = model.predict([final_features])
-    doc = User.query.filter_by(doctype='diabetes')
-    print(doc.name)
+
+    # doc = User.query.filter_by(doctype=prediction).all()
+    # print(doc.name)
+
+    # docs = User.query.all()
+
+    # for doc in docs:
+    #     print(doc.name)
+
     # print(prediction)
     
     # output = '{0:.{1}f}'.format(10*prediction[0][1],2)
-    predictText="Greetings from Wecare\non the basis of the information provided by you our predictor has found that you are at the risk of you having "+str(prediction)
+    predictText="Greetings from WeCare\nOn the basis of the information provided by you, our predictor has found that you are at the risk of you having "+prediction[0]
     SUBJECT = 'Reg disease prediction by Wecare'
     TEXT = predictText + "\n" +  "For further reference visit our webpage"+"\n"+"Note: This is just a prediction and not a real diagnosis of the disease. You should consult a doctor immediately if you feel you are at risk." 
     message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT)

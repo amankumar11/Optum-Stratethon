@@ -10,7 +10,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 60%;
+    width: 50%;
 }
 
 .result-right{
@@ -23,6 +23,7 @@
 
 .result-left-predict{
     display: flex;
+    flex-direction: column;
     width: 95%;
     height: 50%;
     /* background-color: aqua; */
@@ -57,4 +58,73 @@
     /* background-color: aqua; */
     border: 1px solid black;
     border-radius: 10px;
+}
+
+/* new result  */
+.result-main{
+    display: flex;
+    flex-direction: row;
+    height: 40vh;
+    width: 100%;
+    background-color: black;
+}
+
+.signin-left{
+    display: flex;
+    width: 50%;
+}
+
+.signin-right{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.prediction-container{
+    background-color: rgba(128, 128, 128, 0.151);
+    width: 90%;
+    border-radius: 25px;
+    border: 1px solid grey;
+}
+
+.result-left-h1{
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+.prediction-h1{
+    color: red;
+    margin-left: 20px;
+    font-size: 40px;
+}
+
+.doctor-container{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    width: 90%;
+    height: 50vh;
+    margin-top: 20px;
+    background-color: rgba(128, 128, 128, 0.151);
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+.doctor-div{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    height: 80px;
+    width: 90%;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin: 5px 0px;
+}
+
+.doctor-name{
+    font-size: 20px;
+    margin: 0px;
+    margin-left: 10px;
 }
